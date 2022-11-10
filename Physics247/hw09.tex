@@ -1,0 +1,160 @@
+\documentclass{article}
+\title{Physics 247 HW 09}
+\author{Name: Hleb Zhynko}
+\date{Due: November 11, 2022}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+\subsection*{Part a}
+Let $M$ be the rocket's mass, $\delta$ - the infinitesimal change in rocket's mass, $v$ - the velocity of the rocket, $dv$ - the infinitesimal change in rocket's velocity, and $v_0$ - the velocity at which the propellant is ejected relative to the rocket. Since the rocket is not affected by gravity, we can use the conservation of momentum to find the final velocity of the rocket:
+
+\[
+Mv = (M-\delta)(v+dv) + \delta(v-v_0) = Mv - \delta v + Mdv - \delta dv + \delta v - \delta v_0;
+\]
+\[
+Mdv = \delta v_0, \delta = -dM.
+\]
+
+Let $M(0) = M_{rocket} + M_{propellant} = M_R + M_p = 10kg$, $M(t) = M_R = 1kg$:
+
+\[
+\int_{M(0)}^{M(t)} -\frac{1}{M} \,dM = \int_{0}^{v(t)} \frac{1}{v_0} \,dv;
+\]
+\[
+v = v_0 \ln\frac{M_R + M_p}{M_R} = 2000 * \ln10 \approx 4605.17 m/s.
+\]
+
+\subsection*{Part b}
+An inelastic collision results in just the momentum of the system being conserved. Let $m_R = 1kg$ be the mass of the rocket after the burn, $v = 4605.17 m/s$ - the velocity of the rocket after the burn, and $m_d = 1kg$ - the mass of the debris. Using the conservation of momentum to find $v_f$, the final velocity of the system:
+
+\[
+m_Rv + m_d * 0 = v_f(m_R + m_d);
+\]
+\[
+v_f = \frac{m_R}{m_R + m_d}v = \frac{1}{2} * 4605.17 = 2302.6 m/s.
+\]
+
+\subsection*{Part c}
+An elastic collision results in both the momentum and the energy of the system being conserved. Let the mass notation be the same as in Part b, $v_i$ - the velocity of the rocket after the burn, $v_1$ - the velocity of the rocket after collision, $v_2$ - the velocity of the debris after collision. Using the conservation of momentum and the conservation of energy to find $v_1$:
+
+\[
+\begin{cases}
+m_Rv_i = m_Rv_1 + m_dv_2,\\
+\frac{1}{2}m_Rv_i^2 = \frac{1}{2}m_Rv_1^2 + \frac{1}{2}m_dv_2^2;\\
+\end{cases}
+\]
+\[
+\begin{cases}
+m_R(v_i - v_1) = m_dv_2,\\
+m_R(v_i^2 - v_1^2) = m_dv_2^2;\\
+\end{cases}
+\]
+\[
+\frac{v_i^2 - v_1^2}{v_i - v_1} = v_2 \Rightarrow v_i + v_1 = v_2;
+\]
+\[
+\begin{cases}
+v_2 = v_i + v_1,\\
+m_Rv_i = m_Rv_1 + m_dv_i + m_dv_1;\\
+\end{cases}
+\]
+\[
+v_1 = v_i\frac{m_R - m_d}{m_R + m_d} = 4605.17 * \frac{1 - 1}{1 + 1} = 0.
+\]
+
+\section*{Problem 2}
+\subsection*{Part a}
+Let $m_1 = m$, $v_1 = 1000m/s$, and $v_1\prime$ be the mass, initial velocity, and final velocity respectively of the first particle, and $m_2 = 2m$ and $v_2\prime$ -- the mass and the final velocity respectively of the second particle. Since the collision is elastic, using the conservation of momentum and the conservation of energy:
+
+\[
+\begin{cases}
+m_1v_1 = m_1v_1\prime + m_2v_2\prime,\\
+\frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1v_1\prime^2 + \frac{1}{2}m_2v_2\prime^2;\\
+\end{cases}
+\]
+
+\subsection*{Part b}
+Using the system of equations from Part a and a similar approach to the one used in Problem 1 Part c to find $v_1\prime$ and $v_2\prime$:
+
+\[
+\begin{cases}
+m_1(v_1 - v_1\prime) = m_2v_2\prime,\\
+m_1(v_1^2 - v_1\prime^2) = m_2v_2\prime^2;\\
+\end{cases}
+\]
+\[
+\frac{v_1^2 - v_1\prime^2}{v_1 - v_1\prime} = v_2\prime \Rightarrow v_1 + v_1\prime = v_2\prime;
+\]
+\[
+\begin{cases}
+v_2\prime = v_1 + v_1\prime,\\
+m_1v_1 = m_1v_1\prime + m_2v_1 + m_2v_1\prime;\\
+\end{cases}
+\]
+\[
+\begin{cases}
+v_1\prime = v_1\frac{m_1 - m_2}{m_1 + m_2},\\
+m_1v_1 = m_1v_1\frac{m_1 - m_2}{m_1 + m_2} + m_2v_2\prime;\\
+\end{cases}
+\]
+\[
+\begin{cases}
+v_1\prime = v_1\frac{m_1 - m_2}{m_1 + m_2},\\
+v_2\prime = v_1\frac{2m_1}{m_1 + m_2}.\\
+\end{cases}
+\]
+Thus, we have:
+\[
+v_1\prime = 1000 * \frac{1 - 2}{3} \approx -333.3m/s;
+\]
+\[
+v_2\prime = 1000 * \frac{2}{3} \approx 666.6m/s.
+\]
+
+\section*{Problem 3}
+Let $M$ and $v_R$ be the mass and the final velocity respectively of the ramp, and $m$ and $v_C$ - the mass and the final velocity respectively of the cart. Let $h$ be the starting height of the cart. Since there is no net force acting on the system, using the conservation of momentum and the conservation of energy to find $v_R$ and $v_C$:
+
+\[
+\begin{cases}
+m * 0 + M * 0 = mv_C - Mv_R,\\
+mgh = \frac{1}{2}mv_C^2 + \frac{1}{2}Mv_R^2;\\
+\end{cases}
+\]
+\[
+\begin{cases}
+mv_C = Mv_R,\\
+2mgh = mv_C^2 + Mv_R^2;\\
+\end{cases}
+\]
+\[
+\begin{cases}
+mv_C^2 = \frac{1}{m}M^2v_R^2,\\
+2mgh = \frac{1}{m}M^2v_R^2 + Mv_R^2;\\
+\end{cases}
+\]
+\[
+v_R^2 = \frac{2mgh}{\frac{1}{m}M^2 + M};
+\]
+\[
+\begin{cases}
+v_R^2 = \frac{2mgh}{\frac{1}{m}M^2 + M},\\
+2mgh = mv_C^2 + \frac{2mgh}{\frac{1}{m}M + 1};\\
+\end{cases}
+\]
+\[
+v_C^2 = \frac{2Mgh}{M + m}.
+\]
+Thus, we have:
+\[
+v_R = \sqrt{\frac{2mgh}{\frac{1}{m}M^2 + M}};
+\]
+\[
+v_C = \sqrt{\frac{2Mgh}{M + m}}.
+\]
+
+\end{document}
