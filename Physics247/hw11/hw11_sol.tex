@@ -1,0 +1,50 @@
+\documentclass{article}
+\title{Physics 247 HW 11}
+\author{Name: Hleb Zhynko}
+\date{Due: November 23, 2022}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+\subsection*{Part a}
+According to $E^2 = (pc)^2 + (mc^2)^2$, the final energy of the electron only depends on its final momentum. From the equation derived in class,
+
+\[
+\vec{P_e}^2 = \vec{P_i}^2 + \vec{P_f}^2 - 2P_iP_f\cos{\theta},
+\]
+we can see that the final momentum of the electron only depends on the angle $\theta$ in $(-2P_iP_f\cos{\theta})$. Therefore, in order to maximize $P_e$, we need to maximize $(-2P_iP_f\cos{\theta})$.
+
+$\cos{\theta}$ is equal to $-1$ when $\theta = \pm \pi$. Therefore, leaving just the positive part,
+
+\[
+\theta = \pi.
+\]
+
+\subsection*{Part b}
+Let us first find the final energy of the photon. Let $\lambda_i$ and $\lambda_f$ be the initial and the final wavelengths of the photon. Let $E_{pi}$ and $E_{pf}$ be the initial and the final energies of the photon.
+Using the equation derived in class:
+
+\[
+(\lambda_f - \lambda_i) = \frac{h}{m_ec}(1-\cos{\theta}) = 2 \frac{h}{m_ec};
+\]
+\[
+\lambda_f = 2 \frac{h}{m_ec} + \lambda_i = 2 \frac{h}{m_ec} + \frac{hc}{E_{pi}};
+\]
+\[
+E_{pf} = \frac{hc}{\lambda_f} = \frac{hc}{2 \frac{h}{m_ec} + \frac{hc}{E_{pi}}} = \frac{E_{pi} \times m_ec^2}{2E_{pi} + m_ec^2} = \frac{0.1240 \times 0.511}{2 \times 0.1240 + 0.511} \approx 0.0835\,MeV.
+\]
+
+Next, let us find the final energy of the electron using the law of conservation of energy:
+
+\[
+E_{pi} + m_ec^2 = E_{pf} + E_e;
+\]
+\[
+E_e = E_{pi} - E_{pf} + m_ec^2 = 0.1240 - 0.0835 + 0.511 = 0.5515\,MeV.
+\]
+
+\end{document}
